@@ -1,13 +1,13 @@
 # EXPERIMENT-01-INTERFACTING-DIGITAL-OUTPUT-WITH-EDGE-DEVICE---(RASPBERRYPI-PICO)
-### NAME 
-### DEPARTMENT 
-### ROLL NO 
-### DATE OF EXPERIMENT 
+### NAME :ARJUN K
+### DEPARTMENT : CSE
+### ROLL NO : 212224040028
+### DATE OF EXPERIMENT : 24.02.2025
 
-### AIM
+### AIM:
 To interface a digital output device (LED) with the Raspberry Pi Pico and control it using MicroPython.
 
-## APPARATUS REQUIRED
+## APPARATUS REQUIRED:
 Raspberry Pi Pico
 LED (Light Emitting Diode)
 330Ω Resistor
@@ -39,27 +39,58 @@ Connect the anode (longer leg) of the LED to GP15 via a 330Ω resistor.
 Connect the cathode (shorter leg) of the LED to GND (ground).
 
 
-## PROGRAM (MicroPython)
+## PROGRAM (MicroPython):
+program 1:
+```
+from machine import Pin
+from utime import sleep
+led1 = Pin(0,Pin.OUT)
+led2 = Pin(1,Pin.OUT)
+led3 = Pin(2,Pin.OUT)
+buzz = Pin(3,Pin.OUT)
+while True:
+    led1.toggle()
+    sleep(0.5)
+    buzz.toggle()
+    led2.toggle()
+    sleep(0.5)
+    buzz.toggle()
+    led3.toggle()
+    sleep(0.5)
+    buzz.toggle()
+````
+program 2:
+```
+from machine import Pin
+from utime import sleep
+led1 = Pin(0,Pin.OUT)
+led2 = Pin(1,Pin.OUT)
+led3 = Pin(2,Pin.OUT)
+while True:
+    led1.toggle()
+    sleep(0.5)
+    led2.toggle()
+    sleep(0.5)
+    led3.toggle()
+    sleep(0.5)
+```
+program 3:
+```
+from machine import Pin
+from utime import sleep
+led1 = Pin(0,Pin.OUT)
+while True:
+    led1.toggle()
+    sleep(0.5)
 ```
 
+### OUPUT :
+output 1:
+![Screenshot 2025-02-24 112954](https://github.com/user-attachments/assets/9856e654-e349-4ed8-b538-f8c31318276b)
+output 2:
+![Screenshot 2025-02-24 113647](https://github.com/user-attachments/assets/f6a946f9-9e45-4330-8270-062f071d756e)
+output 3:
+![Screenshot 2025-02-24 113719](https://github.com/user-attachments/assets/b159213a-76c1-4327-8ed1-1bc5fee2a510)
 
- 
-
-
-
- 
-````
-
-### OUPUT  
-
-
-# FIGURE -02 ADD TITILE HERE 
-
-#  FIGURE -03 ADD TITILE HERE 
-
-# FIGURE -04 ADD TITLE HERE 
-
-
- 
 ## RESULTS
 The LED connected to the Raspberry Pi Pico successfully turns ON and OFF at  user defined time  confirming the proper interfacing of a digital output.
